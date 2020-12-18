@@ -1,0 +1,85 @@
+
+div.course-card{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 25px 25px 25px 0px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 300px;
+    height: 430px;
+}
+
+.course-text{
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: 'Helvetica Neue';
+    padding: 20px 20px 5px 20px;
+    margin-bottom: auto;
+}
+
+.course-name{
+    font-style: 'Helvetica Neue';
+    font-weight: 600;
+    font-size: 20px;
+    color: #696D7D;
+    padding: 0px;
+    margin: 5px;
+}
+
+.author-name{
+    font-style: 'Helvetica Neue';
+    font-size: 12px;
+    font-weight: 500;
+    color: #68B0AB;
+    padding: 0px;
+    margin: 5px;
+}
+
+.course-description{
+    font-style: 'Helvetica Neue';
+    font-size: 12px;
+    font-weight: 400;
+    color: #696D7D;
+    padding: 0px;
+    margin: 10px 5px 10px 5px;
+}
+
+.course-thumbnail{
+    height: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.rating-title{
+    color: #696D7D;
+    padding: 0px;
+    margin: 5px;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.star-rating{
+    padding: 5px;
+    color: #696D7D;
+}
+
+.start-button{
+    color: #FFFFFF;
+    background-color: #68B0AB;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0px 0px 20px 20px;
+    width: 40%;
+    height: 40px;
+    font-size: 13px;
+    font-style: 'Helvetica Neue';
+    font-weight: Bold;
+}
+
+.start-button:hover{
+    background-color: #589692;
+    cursor: pointer;
+}
