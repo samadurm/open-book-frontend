@@ -28,10 +28,10 @@ const pageStyle = css`
     padding: 14px 16px;
     text-decoration: none;
     &:hover {
-        color: #87A96B;
+        color: #8FC0A9;
     }
     &.active{
-        color: green;
+        color: #8FC0A9;
     }
 `;
 

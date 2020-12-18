@@ -1,4 +1,4 @@
-/** @jsxRuntime classic */ 
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from '@emotion/react';
 // import axios from 'axios'; // be used for fetching data from backend
@@ -9,6 +9,7 @@ const containerStyle = css`
     text-align: center;
     font-size: 20px;
     font-weight: 100;
+    
 `;
 
 export default function Homepage() {
@@ -16,10 +17,16 @@ export default function Homepage() {
     return (
         <div >
             <div css={containerStyle}>
-                <h1>Welcome to OpenBook!</h1>
-                <div>
-                    <p>This site is still under development...</p>
-                </div>
+                <h1>Sign In</h1>
+
+                <input required
+                    type="text"
+                    placeholder="Username"
+                />
+                <input required
+                    type="text"
+                    placeholder="Password"
+                />
             </div>
         </div>
     );

@@ -12,10 +12,11 @@ import { css, jsx, Global } from '@emotion/react';
 const pageStyles = css`
   body {
     margin: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: Helvetica Neue;
     font-weight: 300;
     font-size: 18px;
     min-height: 100%;
+    background-color: #8FC0A9;
   }
   a {
     font-weight: bold;
