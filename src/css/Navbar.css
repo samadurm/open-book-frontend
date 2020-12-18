@@ -1,0 +1,56 @@
+.navbarStyle{
+    list-style-type: none;
+    margin: 0px;
+    padding: 15px;
+    overflow: hidden;
+    background-color: white;
+    border: none;
+    
+}
+
+.listStyle{
+    float: right; 
+}
+
+.OpenBookStyle .logo{
+    float: left; 
+    color: #68B0AB;
+    font-weight: 600;
+}
+
+.pageStyle{
+    display: block;
+    color: #696D7D;
+    text-align: center;
+    font-weight: 400;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    border:#696D7D solid 1px;
+    border-radius: 15px;
+    padding: 5px;
+    height: 25px;
+}
+
+.search-icon{
+    color: #696D7D;
+    align-self: center;
+    padding: 5px;
+}
+
+.search-input{
+    text-align: left;
+    border: none;
+}
+
+.pageStyle:hover{
+    color: #68B0AB;
+}
+
+.pageStyle:active{
+    color: green;   
+}
