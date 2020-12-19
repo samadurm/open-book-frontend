@@ -1,4 +1,5 @@
 import CourseCard from '../components/CourseCard';
+import Header from "../components/Header";
 import "../css/Browse.css";
 /** @jsxRuntime classic */
 /** @jsx jsx */
@@ -11,7 +12,7 @@ export default function Create() {
     return (
         <div >
             <div>
-                <h1 className="header">Browse</h1>
+                <Header title="Browse" />
                 <div className="course-section">
                     <h3 className="section-title">Most Popular Courses</h3>
                     <div className="card-box">
