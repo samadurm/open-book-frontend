@@ -15,7 +15,6 @@ export const useInput = initialValue => {
                 event.preventDefault();
                 setValue(event.target.value);
             }
-        },
-        update: (updateValue) => setValue(updateValue)
+        }
     };
 };

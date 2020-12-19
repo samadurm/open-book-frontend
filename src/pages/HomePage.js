@@ -4,7 +4,6 @@ import { css, jsx } from '@emotion/react';
 import { useInput } from '../components/GetUserInput';
 // import axios from 'axios'; // be used for fetching data from backend
 
-
 const containerStyle = css`
     width: 100%;
     margin-top: 75px;
@@ -19,7 +18,11 @@ const outerContainer = css`
 
 export default function Homepage() {
 
-    const { value: username, bind: bindUserName, reset: resetUserName, update: updateUserName } = useInput('');
+    const { value: username, bind: bindUserName, reset: resetUserName } = useInput('');
+    const { value: password, bind: bindPassword, reset: resetPassword } = useInput('');
+
+    console.log("username: ", username);
+    console.log("password: ", password);
 
     return (
         <div >
@@ -29,10 +32,12 @@ export default function Homepage() {
             <input required
                 type="text"
                 placeholder="Username"
+                {...bindUserName}
             />
             <input required
                 type="text"
                 placeholder="Password"
+                {...bindPassword}
             />
         </div>
     );
