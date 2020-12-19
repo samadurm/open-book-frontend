@@ -1,48 +1,19 @@
 import { NavLink } from 'react-router-dom';
+import "../css/Navbar.css";
 
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { css, jsx } from '@emotion/react';
-
-const navbarStyle = css`
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: white;
-    border-bottom: 1px solid black;
-`;
-
-const listStyle = css`
-    float: right;    
-`;
-
-const OpenBookStyle = css`
-    float: left;    
-`;
-
-const pageStyle = css`
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    &:hover {
-        color: #8FC0A9;
-    }
-    &.active{
-        color: #8FC0A9;
-    }
-`;
+import { jsx } from '@emotion/react';
 
 export default function Navbar() {
 
     return (
         <header >
             <nav >
-                <ul css={navbarStyle}>
-                    <li css={OpenBookStyle}> <NavLink css={pageStyle} exact to='/'>OpenBook</NavLink> </li>
-                    <li css={listStyle}> <NavLink css={pageStyle} exact to='/create'>Create</NavLink> </li>
+                <ul className="navbarStyle">
+                    <li className="OpenBookStyle"> <NavLink className="logo pageStyle" exact to='/'>OpenBook</NavLink> </li>
+                    <li className="listStyle"> <NavLink className="pageStyle" exact to='/create'>Create</NavLink> </li>
+                    <li className="listStyle"> <NavLink className="pageStyle" exact to='/browse'>Browse</NavLink> </li>
                 </ul>
             </nav>
         </header>
