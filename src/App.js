@@ -18,7 +18,6 @@ const pageStyles = css`
     font-weight: 300;
     font-size: 18px;
     min-height: 100%;
-    background-color: #8FC0A9;
   }
   a {
     font-weight: bold;
