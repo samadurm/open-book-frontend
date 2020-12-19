@@ -1,0 +1,53 @@
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  div.form-container{
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+  }
+
+  .sctn-title{
+    margin: 20px;
+    font-style: 'Helvetica Neue';
+    font-weight: 500;
+    font-size: 25px;
+    color: #696D7D;
+}
+
+.sctn-detail{
+  margin-left: 20px;
+  color: #696D7D;
+}
+
+input.btn{
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+
+.btn{
+  color: #FFFFFF;
+  background-color: #68B0AB;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+  max-width: 100px;
+  height: 40px;
+  font-size: 13px;
+  font-style: 'Helvetica Neue';
+  font-weight: Bold;
+}
+
+.btn:hover{
+  background-color: #589692;
+  cursor: pointer;
+}

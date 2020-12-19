@@ -5,7 +5,6 @@
     overflow: hidden;
     background-color: white;
     border: none;
-    
 }
 
 .listStyle{
@@ -32,6 +31,7 @@
     border:#696D7D solid 1px;
     border-radius: 10px;
     padding: 5px;
+    margin-bottom: 10px;
     height: 20px;
 }
 
