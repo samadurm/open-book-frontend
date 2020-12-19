@@ -28,29 +28,32 @@
 }
 
 .search-bar{
-    display: flex;
-    flex-direction: row;
+    color: #696D7D; 
     border:#696D7D solid 1px;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 5px;
-    height: 25px;
+    height: 20px;
 }
 
-.search-icon{
+div.search.pageStyle{
+    display: block;
+    color: #696D7D;
+    text-align: center;
+    font-weight: 400;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+/*.search-icon{
     color: #696D7D;
     align-self: center;
     padding: 5px;
-}
-
-.search-input{
-    text-align: left;
-    border: none;
-}
+}*/
 
 .pageStyle:hover{
     color: #68B0AB;
 }
 
 .pageStyle:active{
-    color: green;   
+    color: #68B0AB;   
 }
