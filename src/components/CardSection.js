@@ -56,6 +56,7 @@ export default function CardSection(props) {
     useEffect(checkIfCourses, [])
 
     var x = checkIfCourses()
+    console.log("props.persons", props.persons);
 
     if (x) {
         return (

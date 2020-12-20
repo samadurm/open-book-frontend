@@ -6,6 +6,7 @@ import "../css/Browse.css";
 /** @jsx jsx */
 import React, { useEffect, useState } from 'react';
 import { css, jsx } from '@emotion/react';
+import axios from 'axios'
 // import axios from 'axios'; // be used for fetching data from backend
 
 
@@ -43,7 +44,7 @@ export default function Create() {
         setPersons(data);
     };
     console.log("persons: ", persons);
-    useEffect(getAuthor, [])
+    //useEffect(getAuthor)
 
     useEffect(getCourses, [])
     useEffect(getCategories, [])
