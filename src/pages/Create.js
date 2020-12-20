@@ -29,11 +29,11 @@ export default function Create() {
             <p className="sctn-detail">Add a new course and select the category it best fits in.</p>
             <div className="form-container">
                 <form>
-                    <label for="title">Course title</label><br />
+                    <label htmlFor="title">Course title</label><br />
                     <input id="title" type="text" /><br />
-                    <label for="description">Course description</label><br />
+                    <label htmlFor="description">Course description</label><br />
                     <input id="description" type="text" /><br />
-                    <label for="cars">Select a category:</label>
+                    <label htmlFor="cars">Select a category:</label>
                     <select id="cars" name="cars">
                         <option value="arto">Art</option>
                         <option value="music">Music</option>

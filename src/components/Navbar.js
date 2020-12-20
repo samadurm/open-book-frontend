@@ -30,14 +30,14 @@ export default function Navbar() {
         <header >
             <nav >
                 <ul className="navbarStyle">
-                    <li className="OpenBookStyle"> <NavLink className="logo pageStyle" exact to='/'>OpenBook</NavLink> </li>
+                    <li className="OpenBookStyle"> <NavLink activeClassName="active-pg" className="pageStyle" exact to='/'>OpenBook</NavLink> </li>
                     <li className="listStyle">
-                        <form onSubmit={getSearch} className="search pageStyle">
-                            <input className="search-bar" onChange={updateSearch} type="text" placeholder="Search"></input>
+                        <form onSubmit={getSearch} className="search">
+                            <input id="search-bar" onChange={updateSearch} type="text" placeholder="Search..." />
                         </form>
                     </li>
-                    <li className="listStyle"> <NavLink className="pageStyle" exact to='/create'>Create</NavLink> </li>
-                    <li className="listStyle"> <NavLink className="pageStyle" exact to='/browse'>Browse</NavLink> </li>
+                    <li className="listStyle"> <NavLink activeClassName="active-pg" className="pageStyle" exact to='/create'>Create</NavLink> </li>
+                    <li className="listStyle"> <NavLink activeClassName="active-pg" className="pageStyle" exact to='/browse'>Browse</NavLink> </li>
                 </ul>
             </nav>
         </header>
