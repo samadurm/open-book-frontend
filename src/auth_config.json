@@ -1,4 +1,5 @@
 {
   "domain": "openbook.us.auth0.com",
-  "clientId": "yjpQH18msGqXwafDw4qGcnCC3Qa9TeQ2"
+  "clientId": "yjpQH18msGqXwafDw4qGcnCC3Qa9TeQ2",
+  "audience": "open-book1.azurewebsites.net/api/"
 }

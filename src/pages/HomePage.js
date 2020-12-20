@@ -4,6 +4,8 @@ import { css, jsx } from '@emotion/react';
 import { useInput } from '../components/GetUserInput';
 // import axios from 'axios'; // be used for fetching data from backend
 
+import React, { Fragment } from "react";
+
 const containerStyle = css`
     width: 100%;
     margin-top: 75px;
@@ -25,20 +27,12 @@ export default function Homepage() {
     console.log("password: ", password);
 
     return (
-        <div >
-            <div css={containerStyle}>
-                <h1>Sign In</h1>
-            </div>
-            <input required
-                type="text"
-                placeholder="Username"
-                {...bindUserName}
-            />
-            <input required
-                type="text"
-                placeholder="Password"
-                {...bindPassword}
-            />
-        </div>
+
+        <Fragment>
+        {/* <Hero /> */}
+        <hr />
+        {/* <Content /> */}
+        Hello World!
+      </Fragment>
     );
 }

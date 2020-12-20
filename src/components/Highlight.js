@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-
+import 'bootstrap/dist/css/bootstrap.css';
 import hljs from "highlight.js";
 import "highlight.js/styles/monokai-sublime.css";
 

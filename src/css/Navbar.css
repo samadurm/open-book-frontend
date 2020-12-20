@@ -51,6 +51,7 @@
 
 .pageStyle:hover{
     color: #68B0AB;
+    text-decoration: none;
 }
 
 .active-pg {

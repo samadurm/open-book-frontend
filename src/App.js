@@ -1,14 +1,25 @@
-import { Route, Switch } from 'react-router-dom';
+// import { Route, Switch } from 'react-router-dom';
+import React from "react";
+import { Router, Route, Switch } from "react-router-dom";
+
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { css, jsx, Global } from '@emotion/react';
+
+import Loading from "./components/Loading";
+import Profile from "./views/Profile";
+import { useAuth0 } from "@auth0/auth0-react";
+import history from "./utils/history";
+
+// fontawesome
+import initFontAwesome from "./utils/initFontAwesome";
+initFontAwesome();
 
 import Navbar from './components/Navbar';
 import Create from './pages/Create';
 import Browse from './pages/Browse';
 import HomePage from './pages/HomePage';
 import NotFound from './pages/NotFound';
-
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { css, jsx, Global } from '@emotion/react';
 
 const pageStyles = css`
   body {
@@ -28,18 +39,41 @@ const pageStyles = css`
 
 export default function App() {
 
+  const { isLoading, error } = useAuth0();
+
+  if (error) {
+    return <div>Oops... {error.message}</div>;
+  }
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
-    <div >
+    // <div >
+    //   <Global styles={pageStyles} />
+    //   <Navbar />
+    //   <main>
+    //     <Switch>
+    //       <Route exact path="/" component={HomePage} />
+    //       <Route exact path="/create" component={Create} />
+    //       <Route exact path="/browse" component={Browse} />
+            // <Route path="/profile" exact component={Profile} />
+    //       <Route path="*" component={NotFound} />
+    //     </Switch>
+    //   </main>
+    <div>
       <Global styles={pageStyles} />
-      <Navbar />
-      <main>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/create" component={Create} />
-          <Route exact path="/browse" component={Browse} />
-          <Route path="*" component={NotFound} />
-        </Switch>
-      </main>
-    </div>
+        <Router history={history}>
+          <Navbar />
+            <Switch>
+              <Route path="/" exact component={HomePage} />
+              <Route path="/create" exact component={Create} />
+              <Route path="/browse" exact component={Browse} />
+              <Route path="/profile" exact component={Profile} />
+              <Route path="*" component={NotFound} />
+            </Switch>      
+      </Router>
+      </div>
   );
 }

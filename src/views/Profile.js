@@ -1,4 +1,5 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.css';
 import { Container, Row, Col } from "reactstrap";
 
 import Highlight from "../components/Highlight";
