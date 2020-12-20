@@ -29,6 +29,7 @@ const pageStyles = css`
     font-weight: 300;
     font-size: 18px;
     min-height: 100%;
+    background-color: #f8f9fa;
   }
   a {
     font-weight: bold;
@@ -52,16 +53,16 @@ export default function App() {
   return (
     <div>
       <Global styles={pageStyles} />
-        <Router history={history}>
-          <Navbar />
-            <Switch>
-              <Route path="/" exact component={HomePage} />
-              <Route path="/create" exact component={Create} />
-              <Route path="/browse" exact component={Browse} />
-              <Route path="/profile" exact component={Profile} />
-              <Route path="*" component={NotFound} />
-            </Switch>      
+      <Router history={history}>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/create" exact component={Create} />
+          <Route path="/browse" exact component={Browse} />
+          <Route path="/profile" exact component={Profile} />
+          <Route path="*" component={NotFound} />
+        </Switch>
       </Router>
-      </div>
+    </div>
   );
 }

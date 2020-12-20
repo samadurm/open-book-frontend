@@ -7,6 +7,9 @@ import "../css/Navbar.css";
 /** @jsx jsx */
 import React, { useEffect, useState } from 'react';
 import { css, jsx } from '@emotion/react';
+import axios from 'axios'
+// import axios from 'axios'; // be used for fetching data from backend
+
 
 export default function Create() {
 
@@ -42,7 +45,9 @@ export default function Create() {
         console.log("persons: ", data);
         setPersons(data);
     };
-    useEffect(getAuthor, [])
+    console.log("persons: ", persons);
+    //useEffect(getAuthor)
+
     useEffect(getCourses, [])
     useEffect(getCategories, [])
 
