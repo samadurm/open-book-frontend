@@ -5,6 +5,7 @@
     overflow: hidden;
     background-color: white;
     border: none;
+    height: 205px;
 }
 
 .listStyle{
@@ -31,9 +32,6 @@
     border:#696D7D solid 1px;
     border-radius: 8px;
     padding: 10px;
-    /* margin-left: auto; */
-    /* margin-bottom: 10px; */
-    /* margin: -15px; */
     height: 25px;
 }
 
@@ -54,6 +52,7 @@
 
 .pageStyle:hover{
     color: #68B0AB;
+    text-decoration: none;
 }
 
 .active-pg {
