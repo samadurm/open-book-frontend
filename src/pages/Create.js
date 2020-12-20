@@ -37,7 +37,7 @@ export default function Create() {
     }
 
     return (
-        <div className="container">
+        <div >
             <Header title="Create a new course" />
             <h3 className="sctn-title">1. Add a course</h3>
             <p className="sctn-detail">Add a new course and select the category it best fits in.</p>
