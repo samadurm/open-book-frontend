@@ -21,7 +21,7 @@ export default function CourseForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert(`Submitting`);
+        alert(`Course successfully submitted!`);
 
         let data = {
             name: courseTitle,
