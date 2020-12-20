@@ -4,12 +4,25 @@ import "../css/Create.css";
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useState } from "react";
+import React, { useEffect, useState } from 'react';
 import CourseForm from "../components/CourseForm";
 
 // import axios from 'axios'; // be used for fetching data from backend
 
 export default function Create() {
+
+    const [courseList, setCourseList] = useState([]);
+
+    const getCourses = async () => {
+        const response = await fetch(
+            `http://open-book1.azurewebsites.net/api/course`
+        );
+        const data = await response.json();
+        setCourseList(data);
+        console.log(data);
+    };
+
+    useEffect(getCourses, [])
 
     //var ReactDOM = require('react-dom')
     const [lessonList, setLessonList] = useState([]);
@@ -20,7 +33,7 @@ export default function Create() {
 
     function newLesson() {
         //alert("new lesson to be added!")
-        setLessonList(lessonList.concat(<LessonForm key={lessonList.length} />));
+        setLessonList(lessonList.concat(<LessonForm courses={courseList} key={lessonList.length} />));
     }
 
     return (

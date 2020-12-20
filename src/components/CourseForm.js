@@ -65,7 +65,6 @@ export default function CourseForm() {
             <label for="title">Course title</label><br />
             <input required
                 type="text"
-                placeholder="Title"
                 {...bindTitle}
             />
             <br />
