@@ -179,11 +179,11 @@ export default function NavBar() {
             {/* </div> */}
           </li>
           
-          <li className="listStyle">
+          {/* <li className="listStyle">
             <form onSubmit={getSearch} className="search">
               <input id="search-bar" onChange={updateSearch} type="text" placeholder="Search..." />
             </form>
-          </li>
+          </li> */}
           <li className="listStyle"> <NavLink activeClassName="active-pg" className="pageStyle" exact to='/create'>Create</NavLink> </li>
           <li className="listStyle"> <NavLink activeClassName="active-pg" className="pageStyle" exact to='/browse'>Browse</NavLink> </li>
         </ul>
