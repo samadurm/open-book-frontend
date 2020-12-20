@@ -36,7 +36,6 @@ export default function CardSection(props) {
 
 
     const checkIfCourses = () => {
-        console.log("hello")
         var count = 0;
         {
             courses.map(course => (
