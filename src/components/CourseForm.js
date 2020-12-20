@@ -3,10 +3,13 @@ import "../css/Header.css";
 /** @jsx jsx */
 import { css, jsx } from '@emotion/react';
 import { useInput } from '../components/GetUserInput';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios'; // be used for fetching data from backend
 
 
 export default function CourseForm() {
+
+    const [categoriesList, setCategoriesList] = useState([]);
 
     const { value: courseTitle, bind: bindTitle, reset: resetTitle } = useInput('');
     const { value: courseDescription, bind: bindDescription, reset: resetDescription } = useInput('');
@@ -45,6 +48,17 @@ export default function CourseForm() {
         })
     }
 
+    const getCategories = async () => {
+        const response = await fetch(
+            `http://open-book1.azurewebsites.net/api/course/categories`
+        );
+        const data = await response.json();
+        setCategoriesList(data);
+        console.log(data);
+    };
+
+    useEffect(getCategories, [])
+
     return (
         <form onSubmit={handleSubmit}>
 
@@ -60,10 +74,9 @@ export default function CourseForm() {
             <br />
             <label for="cars">Select a category:</label>
             <select id="category-form" name="category" {...bindCategory}>
-                <option value="Art">Art</option>
-                <option value="Music">Music</option>
-                <option value="Business">Business</option>
-                <option value="Misc">Misc.</option>
+                {categoriesList.map(cat => (
+                    <option value={cat}>{cat}</option>
+                ))}
             </select>
             <input className="btn" type="submit" value="submit" />
         </form>
