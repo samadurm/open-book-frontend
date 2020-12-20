@@ -50,18 +50,6 @@ export default function App() {
   }
 
   return (
-    // <div >
-    //   <Global styles={pageStyles} />
-    //   <Navbar />
-    //   <main>
-    //     <Switch>
-    //       <Route exact path="/" component={HomePage} />
-    //       <Route exact path="/create" component={Create} />
-    //       <Route exact path="/browse" component={Browse} />
-            // <Route path="/profile" exact component={Profile} />
-    //       <Route path="*" component={NotFound} />
-    //     </Switch>
-    //   </main>
     <div>
       <Global styles={pageStyles} />
         <Router history={history}>
