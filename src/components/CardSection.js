@@ -67,7 +67,6 @@ export default function CardSection(props) {
                         < CourseCard
                             name={course.name}
                             authorID={course.teacherId}
-                            authorFirstName={props.persons[course.teacherId - 3].firstName}
                             category={course.category}
                             description={course.description}
                             averageRating={course.averageRating}

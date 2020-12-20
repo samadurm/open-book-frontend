@@ -58,7 +58,7 @@ export default function CourseCard(props) {
             <img className="course-thumbnail" src={image} />
             <div className="course-text">
                 <h2 className="course-name">{props.name}</h2>
-                <p className="author-name">{props.author}</p>
+                <p className="author-name">Author id {props.authorID}</p>
                 <p className="course-description">{props.description}</p>
                 <p className="rating-title">Rating:</p>
                 <StarRatingComponent className="star-rating"
