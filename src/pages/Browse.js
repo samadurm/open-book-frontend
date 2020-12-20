@@ -13,6 +13,7 @@ export default function Create() {
 
     const [categoriesList, setCategoriesList] = useState([]);
     const [courses, setCourses] = useState([]);
+    const [persons, setPersons] = useState([]);
 
     const getCategories = async () => {
         const response = await fetch(
@@ -33,6 +34,17 @@ export default function Create() {
         console.log("courses: ", courses);
     };
 
+    const getAuthor = async () => {
+        const response = await fetch(
+            `http://open-book1.azurewebsites.net/api/person`
+        );
+        const data = await response.json();
+        console.log(data.hits);
+        setPersons(data);
+    };
+    console.log("persons: ", persons);
+    useEffect(getAuthor, [])
+
     useEffect(getCourses, [])
     useEffect(getCategories, [])
 
@@ -41,7 +53,7 @@ export default function Create() {
             <div>
                 <Header title="Browse" />
                 {categoriesList.map(cat => (
-                    <CardSection category={cat} />
+                    <CardSection persons={persons} category={cat} />
                 ))}
             </div>
         </div>

@@ -34,6 +34,7 @@ export default function CardSection(props) {
         //console.log("courses: ", courses);
     };
 
+
     const checkIfCourses = () => {
         console.log("hello")
         var count = 0;
@@ -65,7 +66,8 @@ export default function CardSection(props) {
                         props.category == course.category &&
                         < CourseCard
                             name={course.name}
-                            author={course.teacherId}
+                            authorID={course.teacherId}
+                            authorFirstName={props.persons[course.teacherId - 3].firstName}
                             category={course.category}
                             description={course.description}
                             averageRating={course.averageRating}

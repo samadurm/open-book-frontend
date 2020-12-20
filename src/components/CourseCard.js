@@ -11,15 +11,13 @@ import image5 from '../images/literature.jpg';
 import image6 from '../images/programming.jpg';
 import image7 from '../images/science.jpg';
 import image8 from '../images/technology.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
-import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 import React, { useEffect, useState } from 'react';
 import StarRatingComponent from 'react-star-rating-component';
 
 export default function CourseCard(props) {
 
-    const [persons, setPersons] = useState([0]);
+    //const [persons, setPersons] = useState([0]);
+    var people;
 
     var image = image4
     selectPhoto()
@@ -37,19 +35,23 @@ export default function CourseCard(props) {
 
     }
 
-    const getAuthor = async () => {
+    /*const getAuthor = async () => {
         const response = await fetch(
             `http://open-book1.azurewebsites.net/api/person`
         );
         const data = await response.json();
         console.log("data: ", data);
-        setPersons(data.hits);
-        console.log("persons: ", persons);
-        console.log("persons[1]: ", persons[1]);
+        people = data[1].firstName
+        //console.log("1people: ", people);
+        setPersons(data);
+
     };
+    useEffect(getAuthor, [])*/
+    //{persons.firstName} {persons.lastName}
+    //Author ID {props.author}
 
-    useEffect(getAuthor, [])
-
+    //console.log("{props.authorID}:", props.authorID)
+    console.log("AUTHOR:", props.author)
 
     return (
         <div className="course-card">

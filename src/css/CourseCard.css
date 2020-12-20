@@ -7,7 +7,7 @@ div.course-card{
     border: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 300px;
-    height: 430px;
+    height: 440px;
 }
 
 .course-text{
@@ -26,6 +26,8 @@ div.course-card{
     color: #696D7D;
     padding: 0px;
     margin: 5px;
+    max-height: 48px;
+    overflow-y: hidden;
 }
 
 .author-name{
@@ -42,6 +44,8 @@ div.course-card{
     font-size: 12px;
     font-weight: 400;
     color: #696D7D;
+    height: 30px;
+    overflow-y: scroll;
     padding: 0px;
     margin: 10px 5px 10px 5px;
 }
@@ -62,7 +66,7 @@ div.course-card{
 
 .star-rating{
     padding: 5px;
-    width: 90px;
+    width: 100px;
 }
 
 .start-button{
