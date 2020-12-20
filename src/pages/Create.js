@@ -5,6 +5,7 @@ import "../css/Create.css";
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { useState } from "react";
+import CourseForm from "../components/CourseForm";
 
 // import axios from 'axios'; // be used for fetching data from backend
 
@@ -28,20 +29,7 @@ export default function Create() {
             <h3 className="sctn-title">1. Add a course</h3>
             <p className="sctn-detail">Add a new course and select the category it best fits in.</p>
             <div className="form-container">
-                <form>
-                    <label htmlFor="title">Course title</label><br />
-                    <input id="title" type="text" /><br />
-                    <label htmlFor="description">Course description</label><br />
-                    <input id="description" type="text" /><br />
-                    <label htmlFor="cars">Select a category:</label>
-                    <select id="cars" name="cars">
-                        <option value="arto">Art</option>
-                        <option value="music">Music</option>
-                        <option value="business">Business</option>
-                        <option value="misc">Misc.</option>
-                    </select>
-                    <input className="btn" type="submit" />
-                </form>
+                <CourseForm />
             </div>
 
             <h3 className="sctn-title">2. Add lessons to course</h3>
