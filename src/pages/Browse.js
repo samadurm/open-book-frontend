@@ -1,5 +1,6 @@
 import CourseCard from '../components/CourseCard';
 import Header from "../components/Header";
+import CardSection from "../components/CardSection";
 import "../css/Browse.css";
 /** @jsxRuntime classic */
 /** @jsx jsx */
@@ -39,21 +40,9 @@ export default function Create() {
         <div >
             <div>
                 <Header title="Browse" />
-                <div className="course-section">
-                    <h3 className="section-title">Courses</h3>
-                    <div className="card-box">
-                        {courses.map(course => (
-                            console.log("individual course: ", course),
-                            < CourseCard
-                                name={course.name}
-                                author={course.teacherId}
-                                category={course.category}
-                                description={course.description}
-                                averageRating={course.averageRating}
-                            />
-                        ))}
-                    </div>
-                </div>
+                {categoriesList.map(cat => (
+                    <CardSection category={cat} />
+                ))}
             </div>
         </div>
     );
