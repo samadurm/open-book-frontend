@@ -18,8 +18,28 @@ const logInStyle = css`
     font-weight: 100;
 `;
 
+const URL = `http://open-book1.azurewebsites.net/api/person`;
+
 export default function ProfileComponent() {
     const { user } = useAuth0();
+
+    const addPerson = async () => {
+        await fetch(URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                firstName: user.nickname,
+                lastName: user.name,
+                email: user.email
+            })
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(err => console.log(err));
+    }
+
 
     if (!user) {
         return (
@@ -30,7 +50,9 @@ export default function ProfileComponent() {
 
     }
     else {
+        addPerson();
         return (
+            
             <Container className="align-items-center">
                 <Row className="align-items-center profile-header mb-5 text-center text-md-left">
                     <Col md={2}>
