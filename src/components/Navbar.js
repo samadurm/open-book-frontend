@@ -66,7 +66,7 @@ export default function NavBar() {
     <header >
       <nav >
         <ul className="navbarStyle">
-          <li className="OpenBookStyle"> <NavLink activeClassName="active-pg" className="pageStyle" exact to='/~mayma'>OpenBook</NavLink> </li>
+          <li className="OpenBookStyle"> <NavLink activeClassName="active-pg" className="pageStyle" exact to='/~mayma/openbook'>OpenBook</NavLink> </li>
 
           <li className="listStyle">
           {/* <div > */}
@@ -184,8 +184,8 @@ export default function NavBar() {
               <input id="search-bar" onChange={updateSearch} type="text" placeholder="Search..." />
             </form>
           </li> */}
-          <li className="listStyle"> <NavLink activeClassName="active-pg" className="pageStyle" exact to='/~mayma/create'>Create</NavLink> </li>
-          <li className="listStyle"> <NavLink activeClassName="active-pg" className="pageStyle" exact to='/~mayma/browse'>Browse</NavLink> </li>
+          <li className="listStyle"> <NavLink activeClassName="active-pg" className="pageStyle" exact to='/~mayma/openbook/create'>Create</NavLink> </li>
+          <li className="listStyle"> <NavLink activeClassName="active-pg" className="pageStyle" exact to='/~mayma/openbook/browse'>Browse</NavLink> </li>
         </ul>
       </nav>
     </header>

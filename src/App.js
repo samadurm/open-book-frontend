@@ -56,10 +56,9 @@ export default function App() {
       <Router history={history}>
         <Navbar />
         <Switch>
-          <Route path="/~mayma" exact component={HomePage} />
-          <Route path="/~mayma/create" exact component={Create} />
-          <Route path="/~mayma/browse" exact component={Browse} />
-          <Route path="/~mayma/profile" exact component={Profile} />
+          <Route path="/~mayma/openbook" exact component={HomePage} />
+          <Route path="/~mayma/openbook/create" exact component={Create} />
+          <Route path="/~mayma/openbook/browse" exact component={Browse} />
           <Route path="*" component={NotFound} />
         </Switch>
       </Router>
