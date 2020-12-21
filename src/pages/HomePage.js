@@ -47,7 +47,6 @@ export default function ProfileComponent() {
                 <h3>Please log in or create an account...</h3>
             </div>
         );
-
     }
     else {
         addPerson();
