@@ -1,0 +1,4 @@
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ /~mayma/index.html [QSA,L]
