@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://web.engr.oregonstate.edu/~mayma",
+  "homepage": "http://web.engr.oregonstate.edu/~mayma/openbook",
   "dependencies": {
     "@auth0/auth0-react": "^1.1.0",
     "@emotion/react": "^11.1.1",
